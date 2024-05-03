@@ -8,10 +8,8 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme favorito = new Filme();
+        Filme favorito = new Filme("The Matrix", 1999);
 
-        favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
@@ -22,19 +20,16 @@ public class Principal {
 
         System.out.println("Média de avaliações do filme: " + favorito.pegaMedia());
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("Lost", 2000);
 
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpidodiosPorTemporada(10);
         lost.setMinutosPorTemporadas(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos() + " minutos");
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
+
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -52,9 +47,7 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme();
-        filmeDoPaulo.setNome("Dogville");
-        filmeDoPaulo.setDuracaoEmMinutos(200);
+        Filme filmeDoPaulo = new Filme("Dogville", 200);
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
