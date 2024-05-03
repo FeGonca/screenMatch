@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     // Atributos da classe
     private String nome;
     private int anoDeLancamento;
@@ -70,5 +70,10 @@ public class Titulo {
     public void avalia(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
+    }
+
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
     }
 }
